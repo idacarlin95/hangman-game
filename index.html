@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="./styles/hangman-game.css">
+    <script src="./scipts/jquery-3.7.1.min.js"></script>
+    <script src="./scipts/hangman-game.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="header__page-title">HANGMAN GAME</h1>
+    </header>
+    <p class="word" id="word"></p>
+    <div id="wrong-letters-container">
+        <p>Wrong letters:</p>
+        <div id="wrong-letters"></div>
+    </div>
+    <div id="keyboard"></div>
+    <p id="guess-counter">Wrong guesses: 0/6</p> 
+        <div class="popup" id="popup" style="display:none;">
+            <h2 id="final-message"></h2>
+            <div class="popup-buttons">
+                <button class="play-button" id="play-button">Play again</button>
+                <button class="quit-button" id="quit-button">Quit</button>
+            </div>
+        </div>
+    <div id="notification-container" class="notification-container">
+        <p>You already guessed this letter!</p>
+    </div>
+    <div class="figure-container">
+        <div class="figure-part head" style="display:none;"></div>
+        <div class="figure-part body" style="display:none;"></div>
+        <div class="figure-part left-arm" style="display:none;"></div>
+        <div class="figure-part right-arm" style="display:none;"></div>
+        <div class="figure-part left-leg" style="display:none;"></div>
+        <div class="figure-part right-leg" style="display:none;"></div>
+    </div>
 </body>
 </html>
